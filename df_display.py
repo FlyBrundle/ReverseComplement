@@ -4,6 +4,9 @@ def print_as_df(step = 7, fromfile = False):
         '''
         Breaks up the DNA sequence into 7 character chunks and
         adds to a dict to process into a dataframe
+        
+        :param step: String to set each sequence length
+        :param fromfile: Boolean to check if our data is coming from a file
         '''
         dna = DNATranslator('ATTTCCCAGCGTTATTTCCCGGG') if not fromfile else DNATranslator.dna_from_file(os.path.join(fromfile))
         # dna string data
